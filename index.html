@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double-J 輸尿管導管介紹</title>
+    <!-- 引入 Tailwind CSS CDN，用於快速美觀的響應式設計 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 設定網頁的基礎字體為 Inter，並提供備用字體 */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e2e8f0; /* 更柔和的淺灰藍背景，提供柔和視覺 */
+            color: #2d3748; /* 深灰藍文字顏色，提升閱讀對比 */
+            line-height: 1.7; /* 增加行高，提升閱讀舒適度 */
+        }
+        /* 自訂手風琴內容的樣式，用於控制展開和收合動畫 */
+        .accordion-content {
+            max-height: 0; /* 預設內容高度為0，使其隱藏 */
+            overflow: hidden; /* 隱藏溢出內容 */
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out, box-shadow 0.5s ease-out; /* 過渡效果更平滑，並增加陰影過渡 */
+            padding-top: 0; /* 預設無內邊距 */
+            padding-bottom: 0; /* 預設無內邊距 */
+            box-shadow: none; /* 預設無陰影 */
+        }
+        /* 當手風琴內容活躍時（展開時）的樣式 */
+        .accordion-content.active {
+            max-height: 1000px; /* 設定足夠大的最大高度，以適應大多數內容長度，增加緩衝 */
+            transition: max-height 0.7s ease-in, padding 0.7s ease-in, box-shadow 0.7s ease-in; /* 展開時的過渡效果，調整時間 */
+            padding-top: 1.5rem; /* 展開時設定內邊距 */
+            padding-bottom: 1.5rem; /* 展開時設定內邊距 */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* 展開時增加柔和陰影 */
+        }
+        /* 定義箭頭旋轉動畫 */
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+        /* 調整按鈕的圓角，使其與內容區塊的圓角一致 */
+        .accordion-header {
+            border-radius: 0.75rem; /* 預設圓角 */
+        }
+        .accordion-header.active {
+            border-bottom-left-radius: 0; /* 展開時底部圓角為0 */
+            border-bottom-right-radius: 0; /* 展開時底部圓角為0 */
+        }
+        /* 圖片響應式調整 */
+        .responsive-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem; /* 圓角效果 */
+            margin-top: 1.5rem; /* 與文字的間距 */
+            margin-bottom: 1.5rem; /* 與文字的間距 */
+            display: block; /* 確保圖片獨佔一行 */
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8 md:p-12 lg:p-16">
+    <!-- 主內容容器，置中並設定最大寬度，添加更明顯的陰影和圓角，美化外觀 -->
+    <div class="max-w-5xl mx-auto bg-white shadow-3xl rounded-3xl p-8 sm:p-12 md:p-16 lg:p-20">
+        <!-- 網頁主標題 - 更加突出，使用較深的藍色 -->
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-12 tracking-wide">Double-J 輸尿管導管介紹</h1>
+
+        <!-- 導言部分：什麼是 Double-J 導管？ -->
+        <div class="mb-10 p-6 bg-blue-50 rounded-xl border border-blue-200 shadow-sm">
+            <h2 class="text-2xl font-bold text-blue-700 mb-4 border-b border-blue-300 pb-3">什麼是 Double-J 導管？</h2>
+            <p class="text-gray-700 leading-relaxed text-base sm:text-lg">
+                Double-J 導尿管（也稱為輸尿管支架或 DJ stent）是一種柔軟、細長的管子，由生物相容性材料製成。它的兩端各有一個「J」形彎曲（因此得名 Double-J），用於固定在腎盂（靠近腎臟的一端）和膀胱中（靠近膀胱的一端），以防止導管移位。
+                <span class="text-blue-700 font-bold">它主要用於確保尿液從腎臟順利流向膀胱，繞過任何可能導致阻塞或狹窄的區域。</span>
+                您可以將其想像成泌尿系統中的「心臟支架」，用於維持管道暢通，確保尿液引流通暢。
+                <!-- 圖片放在導言文字下方，並置中顯示 -->
+                [attachment_0](attachment)
+                <img src="https://i.postimg.cc/g0N1dWdd/copilot-image-1751096322339.png" alt="Double-J 導管" class="responsive-image mx-auto">
+            </p>
+        </div>
+
+        <!-- 手風琴式導覽區塊 -->
+        <div id="accordion-container" class="space-y-6">
+            <!-- 用途 (Purpose) 區塊 -->
+            <div class="rounded-xl overflow-hidden border border-blue-200 shadow-md">
+                <button class="accordion-header w-full flex items-center justify-between bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-blue-950 text-white font-semibold py-5 px-7 rounded-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-75 transition-all duration-300 text-lg sm:text-xl transform hover:scale-[1.005]">
+                    <span>用途</span>
+                    <span class="transform transition-transform duration-300">&#9660;</span>
+                </button>
+                <div class="accordion-content bg-blue-50 p-6 text-gray-800 text-base sm:text-lg rounded-b-xl border-t border-blue-100">
+                    <p class="mb-2 font-medium">Double-J 導尿管的主要用途包括：</p>
+                    <ul class="list-disc list-inside space-y-2 pl-4">
+                        <li><strong>尿路阻塞：</strong> 當尿路被結石、腫瘤、血塊或疤痕組織阻塞時，提供尿液流動的通道，避免腎臟積水，<span class="font-semibold text-blue-600">以避免腎功能受損。</span></li>
+                        <li><strong>手術後支持：</strong> 在腎臟或輸尿管手術（如取石手術、輸尿管修復術）後，保護傷口，促進癒合，並防止因水腫或血塊引起的阻塞。</li>
+                        <li><strong>預防或擴張狹窄：</strong> 在某些情況下，用於預防輸尿管狹窄的形成，或逐步擴張輕度輸尿管狹窄。</li>
+                        <li><strong>腎絞痛緩解：</strong> 緩解因尿液回流不暢或阻塞引起的劇烈腎絞痛。</li>
+                        <li><strong>引流膿尿及減緩敗血症：</strong> 當泌尿道感染導致膿液積聚或因阻塞性腎病變引起敗血症時，導尿管可有效引流，有助於控制感染，減輕敗血症的嚴重程度。</li>
+                        <li><strong>引流尿液：</strong> 引流腎臟到膀胱的尿液，常用於輸尿管阻塞、結石、術後保留導管等狀況。</li>
+                        <li><strong>診斷影像輔助：</strong> 在某些放射影像檢查中，用作識別輸尿管位置的標誌。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 材質 (Materials) 區塊 -->
+            <div class="rounded-xl overflow-hidden border border-blue-200 shadow-md">
+                <button class="accordion-header w-full flex items-center justify-between bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-blue-950 text-white font-semibold py-5 px-7 rounded-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-75 transition-all duration-300 text-lg sm:text-xl transform hover:scale-[1.005]">
+                    <span>材質</span>
+                    <span class="transform transition-transform duration-300">&#9660;</span>
+                </button>
+                <div class="accordion-content bg-blue-50 p-6 text-gray-800 text-base sm:text-lg rounded-b-xl border-t border-blue-100">
+                    <p class="mb-2 font-medium">Double-J 導尿管通常由以下幾種生物相容性材料製成，這些材料的選擇會影響其柔軟度、留置時間和結垢風險：</p>
+                    <ul class="list-disc list-inside space-y-2 pl-4">
+                        <li><strong>聚氨酯 (Polyurethane, PU)：</strong> 最常見的材料，具有良好的柔軟性和彈性，通常用於短期或中期留置（約3-6個月）。這種材料在體溫下會變得更軟，以減少對組織的刺激。</li>
+                        <li><strong>矽膠 (Silicone)：</strong> 更柔軟、對組織刺激較小，具有優異的生物相容性，適用於長期留置（可達一年或更久），但管壁通常較厚，內徑相對較小，有時會影響引流效率。</li>
+                        <li>
+                            <strong>金屬合金 (Metal Alloys)：</strong> 通常由鎳鈦合金（Nitinol）製成，具有較強的徑向支撐力，適用於惡性腫瘤引起的頑固性輸尿管狹窄。由於其抗結垢能力較強，可留置更長時間（有時可達一年以上）。移除時可能需要較為複雜的手術。
+                            [attachment_1](attachment)
+                            <img src="https://i.postimg.cc/J4Mgy0nm/41585-2009-Article-BFnrurol2009124-Fig1-HTML.jpg" alt="金屬合金導管" class="responsive-image max-w-xs">
+                        </li>
+                        <li><strong>Percuflex™：</strong> 這是一種特殊的雙硬度設計材料（如 Boston Scientific 產品），其特點是導尿管近端（腎盂端）較硬，便於放置；遠端（膀胱端）較軟，可減少對膀胱的刺激，從而提高患者舒適度。</li>
+                        <li><strong>特殊塗層：</strong> 許多現代導尿管會塗有親水性塗層或抗菌塗層。親水性塗層有助於減少摩擦，便於插入和移除，並減少結垢。抗菌塗層則有助於降低尿路感染的風險。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 形式 (Forms) 區塊 -->
+            <div class="rounded-xl overflow-hidden border border-blue-200 shadow-md">
+                <button class="accordion-header w-full flex items-center justify-between bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-blue-950 text-white font-semibold py-5 px-7 rounded-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-75 transition-all duration-300 text-lg sm:text-xl transform hover:scale-[1.005]">
+                    <span>形式</span>
+                    <span class="transform transition-transform duration-300">&#9660;</span>
+                </button>
+                <div class="accordion-content bg-blue-50 p-6 text-gray-800 text-base sm:text-lg rounded-b-xl border-t border-blue-100">
+                    <p class="mb-2 font-medium">Double-J 導尿管的形式多樣，以適應不同患者的解剖結構和臨床需求：</p>
+                    <ul class="list-disc list-inside space-y-2 pl-4">
+                        <li><strong>標準型：</strong> 最常見的類型，兩端彎曲呈J形，中間為直管段。長度和直徑有多種選擇。</li>
+                        <li>
+                            <strong>環狀型 (Loop Form) / 圈尾型 (Loop Tail Stent)：</strong> 特別是 Polaris™ Loop 尾端設計，其獨特的緊密彎曲設計，旨在減少導尿管下端對膀胱壁的刺激，從而有效緩解常見的膀胱刺激症狀（例如尿頻、尿急、膀胱痙攣）。此類設計常見於 Boston Scientific 公司的產品。
+                            [attachment_2](attachment)
+                            <img src="https://i.postimg.cc/25cnrHKg/1751068070246.jpg" alt="Double-J導管" class="responsive-image mb-2">
+                        </li>
+                        <li><strong>不同長度：</strong> 導尿管的總長度根據患者的輸尿管長度選擇，從兒童的短管到成人的長管都有。</li>
+                        <li><strong>不同直徑 (French size)：</strong> 直徑以 French (Fr) 為單位衡量，從較細的 4.8 Fr 到較粗的 8 Fr 或更大，以適應不同的管腔大小和尿液引流需求。</li>
+                        <li><strong>單J型：</strong> 只有一端是J形，另一端是直的，通常用於腎盂造瘺，即直接從腎臟引流尿液。</li>
+                        <li><strong>有孔/無孔：</strong> 管壁上可能有側孔，以便更好地引流尿液，尤其是在有出血或碎屑的情況下。</li>
+                        <li><strong>帶線型 (Externalized Stent)：</strong> 某些導尿管在放置後會預留一根線從尿道口伸出，便於日後在門診直接拉出移除，無需再次進行膀胱鏡檢查，但感染風險可能略高。</li>
+                        <li><strong>磁性或可降解型：</strong> 較新的技術，旨在減少移除的侵入性，但尚未普及。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 選擇與必要性 區塊 -->
+            <div class="rounded-xl overflow-hidden border border-blue-200 shadow-md">
+                <button class="accordion-header w-full flex items-center justify-between bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-blue-950 text-white font-semibold py-5 px-7 rounded-lg shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-75 transition-all duration-300 text-lg sm:text-xl transform hover:scale-[1.005]">
+                    <span>選擇與必要性</span>
+                    <span class="transform transition-transform duration-300">&#9660;</span>
+                </button>
+                <div class="accordion-content bg-blue-50 p-6 text-gray-800 text-base sm:text-lg rounded-b-xl border-t border-blue-100">
+                    <p class="mb-2 font-medium">Double-J 導尿管的選擇和是否需要放置，是根據患者的具體病情、解剖結構、預期留置時間以及可能出現的併發症風險來決定的。這通常需要醫師進行專業評估。</p>
+                    <ul class="list-disc list-inside space-y-2 pl-4">
+                        <li><strong>評估需求：</strong> 醫師會根據影像學檢查（如超音波、CT、MRI）、尿液分析、腎功能檢查等，判斷是否存在尿路阻塞、感染或需要預防性支撐的情況。</li>
+                        <li><strong>選擇材質與形式：</strong> 根據留置時間、患者對刺激的敏感度、阻塞的性質（良性或惡性）、以及是否存在結石或感染風險等因素，選擇合適的材質（如矽膠、聚氨酯、金屬）和形式（如標準型、圈尾型）。</li>
+                        <li><strong>避免併發症：</strong> 雖然導尿管可能引起不適，但在某些情況下，其必要性遠大於潛在副作用。例如，若不放置導管可能導致嚴重的腎功能受損、腎臟積水感染甚至敗血症，此時放置導管是挽救腎功能和生命的重要手段。</li>
+                        <li><strong>個體化治療：</strong> 每個患者的情況不同，沒有一種「萬能」的導尿管。醫師會綜合考量，為患者選擇最適合的導尿管，並密切監測其狀態。</li>
+                    </ul>
+                    <p class="mt-4 text-sm text-blue-600 font-semibold">
+                        <strong class="text-blue-700">請記住：</strong> 關於您是否需要放置 Double-J 導尿管，以及應選擇何種類型，請務必與您的泌尿科醫師詳細討論。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 副作用 (Side Effects) 區塊 -->
+            <div class="rounded-xl overflow-hidden border border-blue-200 shadow-md">
+                <button class="accordion-header w-full flex items-center justify-between bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-blue-950 text-white font-semibold py-5 px-7 rounded-lg shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-75 transition-all duration-300 text-lg sm:text-xl transform hover:scale-[1.005]">
+                    <span>副作用</span>
+                    <span class="transform transition-transform duration-300">&#9660;</span>
+                </button>
+                <div class="accordion-content bg-blue-50 p-6 text-gray-800 text-base sm:text-lg rounded-b-xl border-t border-blue-100">
+                    <p class="mb-2 font-medium">儘管 Double-J 導尿管是有效的治療工具，但仍可能引起一些常見或不常見的副作用：</p>
+                    <ul class="list-disc list-inside space-y-2 pl-4">
+                        <li><strong>膀胱刺激症狀：</strong> 這是最常見的副作用，包括尿頻（頻繁排尿，發生率約 33-60% [1, 2, 3]）、尿急（約 42-60% [1, 2, 3]）、排尿疼痛或不適（約 39-40% [1, 2]）、膀胱排空不全感（約 28-76% [1, 2]）。這通常是由於導尿管的下端刺激膀胱壁引起。</li>
+                        <li><strong>腰部或腹股溝疼痛：</strong> 約 19-47% [1, 2, 4] 的患者可能在排尿時感受到腰部或恥骨上區疼痛，這是由於尿液可能通過導尿管從膀胱逆流到腎臟引起。活動時也可能加劇。</li>
+                        <li><strong>血尿：</strong> 約 13-38% [1, 2, 5] 的患者可能出現血尿，尤其在劇烈活動後，導尿管可能摩擦泌尿道粘膜導致輕微出血，使尿液呈現粉紅色或紅色。</li>
+                        <li><strong>感染 (UTI)：</strong> 導尿管作為異物，為細菌提供了附著點，增加了尿路感染（UTI）的風險。細菌定植率可達 28-90% [5]，但有症狀的感染發生率約為 3-34% [5, 6]（另一研究顯示 14.8% [3]）。症狀包括發燒、寒顫、腰痛和排尿灼熱感。</li>
+                        <li><strong>結垢或結石形成 (Encrustation)：</strong> 長期留置導尿管可能導致尿液中的礦物質（如鈣、磷酸鹽）在導管表面沉積，形成結垢或新的結石（發生率約 1.7-17.5% [3]），這會影響導尿管功能並使其難以移除。</li>
+                        <li><strong>導管移位或斷裂：</strong> 雖然不常見，但導尿管可能因活動或外部因素而移位（遠端移位約 0.7% [3]，近端移位約 0.9% [3]），導致其功能失效。極少數情況下，導尿管可能會斷裂。</li>
+                        <li><strong>導尿管堵塞：</strong> 血塊、黏液、組織碎屑或結垢可能導致導尿管堵塞，影響尿液引流，引起腎臟積水和疼痛。</li>
+                    </ul>
+                    <p class="mt-4 text-sm text-red-600 font-semibold">
+                        <strong class="text-red-700">重要提示：</strong> 如果您有 Double-J 導尿管並出現嚴重的疼痛、持續發燒、寒顫、血尿加重、或完全無法排尿等症狀，請立即聯繫您的醫生或前往急診就醫。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 衛教資訊 (Patient Education) 區塊 -->
+            <div class="rounded-xl overflow-hidden border border-blue-200 shadow-md">
+                <button class="accordion-header w-full flex items-center justify-between bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-blue-950 text-white font-semibold py-5 px-7 rounded-lg shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-75 transition-all duration-300 text-lg sm:text-xl transform hover:scale-[1.005]">
+                    <span>衛教資訊</span>
+                    <span class="transform transition-transform duration-300">&#9660;</span>
+                </button>
+                <div class="accordion-content bg-blue-50 p-6 text-gray-800 text-base sm:text-lg rounded-b-xl border-t border-blue-100">
+                    <p class="mb-2 font-medium">為了確保 Double-J 導尿管的有效性並減少不適，請務必注意以下衛教事項：</p>
+                    <ul class="list-disc list-inside space-y-2 pl-4">
+                        <li><strong>保持充足水分：</strong> 每天飲用足夠的水（約 2-3 公升，除非醫生另有指示），有助於稀釋尿液、沖洗泌尿道，減少細菌附著和結垢的風險。</li>
+                        <li><strong>避免劇烈活動：</strong> 裝有導尿管期間，應避免過度劇烈的運動、提重物或長時間彎腰，以減少腰部疼痛、血尿或導管移位的可能性。</li>
+                        <li><strong>觀察排尿習慣：</strong> 注意是否有頻尿、尿急、排尿時膀胱或腰部疼痛等症狀。輕微不適是常見的，但若症狀加劇或影響生活，請告知醫生。</li>
+                        <li><strong>注意尿液顏色：</strong> 尿液可能呈現粉紅色或淡紅色，尤其是在活動後，這是正常的。但如果出現大量鮮血、血塊或尿液顏色過深，請立即就醫。</li>
+                        <li><strong>預防感染：</strong> 保持良好的個人衛生。如果出現發燒、寒顫、持續性腰痛、排尿灼熱感、或分泌物有異味等感染跡象，請立即聯繫醫生。</li>
+                        <li><strong>切勿自行移除：</strong> Double-J 導尿管的放置和移除都需要專業醫療人員在無菌環境下進行。切勿嘗試自行移除，以免造成泌尿道損傷或感染。</li>
+                        <li><strong>按時回診：</strong> 導尿管有其建議的留置時間（通常為數週至數月，依材質而異）。請務必按醫生的指示時間回診進行導管的移除或更換，過期不取可能導致嚴重的結垢或併發症。</li>
+                        <li><strong>藥物遵循醫囑：</strong> 如果醫生有開立止痛藥或抗生素，請務必按照指示服用。</li>
+                    </ul>
+                    <p class="mt-4 text-sm text-red-600 font-semibold">
+                        <strong class="text-red-700">緊急狀況：</strong> 如果您出現以下任何嚴重的症狀，請立即前往急診或聯繫您的主治醫師：
+                        <ul class="list-disc list-inside mt-2 ml-4 text-sm">
+                            <li>高燒不退（超過 38.5°C）並伴有寒顫</li>
+                            <li>劇烈且無法忍受的腰痛或腹痛</li>
+                            <li>大量血尿或尿液完全不排出</li>
+                            <li>持續性噁心、嘔吐</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+
+            <!-- 參考資料區塊 -->
+            <div class="rounded-xl overflow-hidden border border-gray-200 shadow-md">
+                <button class="accordion-header w-full flex items-center justify-between bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-blue-950 text-white font-semibold py-5 px-7 rounded-lg shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-75 transition-all duration-300 text-lg sm:text-xl transform hover:scale-[1.005]">
+                    <span>參考資料</span>
+                    <span class="transform transition-transform duration-300">&#9660;</span>
+                </button>
+                <div class="accordion-content bg-gray-50 p-6 text-gray-700 text-xs sm:text-sm rounded-b-xl border-t border-gray-100">
+                    <p class="mb-2 font-medium">本網頁的副作用發生比率數據參考自以下研究：</p>
+                    <ol class="list-decimal list-inside space-y-1 pl-4">
+                        <li>Al-Saadi, M. (2024). *Complications Of Double-J Ureteral Stenting Postoperatively: A Prospective Study*. ResearchGate. Retrieved from <a href="https://www.researchgate.net/publication/369506325_Complications_Of_Double-J_Ureteral_Stenting_Postoperatively_A_Prospective_Study" target="_blank" class="text-blue-500 hover:underline">https://www.researchgate.net/publication/369506325_Complications_Of_Double-J_Ureteral_Stenting_Postoperatively_A_Prospective_Study</a></li>
+                        <li>Iqbal, T., Raza, S. M., et al. (2020). *Post operative complications of double-J ureteral stenting: a prospective study*. International Surgery Journal, 7(5), 1541-1545. Retrieved from <a href="https://www.ijsurgery.com/index.php/isj/article/download/5905/3723/0" target="_blank" class="text-blue-500 hover:underline">https://www.ijsurgery.com/index.php/isj/article/download/5905/3723/0</a></li>
+                        <li>Haq, H. (2018). *Ureteric double-J stent related complications: a single tertiary care center experience from South India*. International Journal of Research in Medical Sciences, 6(11), 3840-3844. Retrieved from <a href="https://www.msjonline.org/index.php/ijrms/article/download/5589/4320" target="_blank" class="text-blue-500 hover:underline">https://www.msjonline.org/index.php/ijrms/article/download/5589/4320</a></li>
+                        <li>Dall’Era, M. A., et al. (2025). *Development of Prediction Models for Severe Pain and Urinary Symptoms After Ureteroscopy With Ureteral Stent Placement: Results From the STENTS Study and Initial Validation of Pain Interference*. Journal of Urology. Retrieved from <a href="https://www.auajournals.org/doi/10.1097/JU.0000000000004370" target="_blank" class="text-blue-500 hover:underline">https://www.auajournals.org/doi/10.1097/JU.0000000000004370</a></li>
+                        <li>Topaloglu, H., et al. (2019). *Is Bacterial Colonization in Ureteral Double-J Stents Significant and Is It Predictable?*. Journal of Urological Surgery, 6(4), 184-188. Retrieved from <a href="https://jurolsurgery.org/articles/is-bacterial-colonization-in-ureteral-double-j-stents-significant-and-is-it-predictable/doi/jus.galenos.2019.3007" target="_blank" class="text-blue-500 hover:underline">https://jurolsurgery.org/articles/is-bacterial-colonization-in-ureteral-double-j-stents-significant-and-is-it-predictable/doi/jus.galenos.2019.3007</a></li>
+                        <li>Cleveland Clinic. (n.d.). *Ureteral Stent: Purpose, Procedure, Results & Removal*. Retrieved from <a href="https://my.clevelandclinic.org/health/treatments/21795-ureteral-stents" target="_blank" class="text-blue-500 hover:underline">https://my.clevelandclinic.org/health/treatments/21795-ureteral-stents</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- 免責聲明區塊 -->
+        <div class="mt-12 pt-10 border-t-2 border-gray-200 text-center text-gray-500 text-xs sm:text-sm">
+            <p class="font-bold mb-2 text-gray-600">免責聲明：</p>
+            <p class="mb-1">本網頁提供的所有資訊僅供一般知識性參考，不能取代專業醫療建議、診斷或治療。</p>
+            <p class="mb-1">關於您的個人健康狀況或任何醫療問題，請務必諮詢合格的醫療專業人員。</p>
+            <p>本網頁不對任何因依賴其中資訊所造成的後果承擔責任。</p>
+        </div>
+    </div>
+
+    <script>
+        // 等待 DOM 內容完全載入後再執行 JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // 選擇所有具有 'accordion-header' 類別的按鈕
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+            // 為每個手風琴標頭添加點擊事件監聽器
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    // 獲取當前標頭的下一個兄弟元素，即手風琴內容區塊
+                    const content = header.nextElementSibling;
+                    // 獲取標頭內的箭頭圖示元素
+                    const arrow = header.querySelector('span:last-child');
+
+                    // 遍歷所有手風琴標頭，關閉其他已開啟的內容區塊
+                    accordionHeaders.forEach(otherHeader => {
+                        // 確保不關閉當前點擊的標頭
+                        if (otherHeader !== header) {
+                            const otherContent = otherHeader.nextElementSibling;
+                            const otherArrow = otherHeader.querySelector('span:last-child');
+                            // 如果其他內容區塊是活躍的（已開啟）
+                            if (otherContent.classList.contains('active')) {
+                                otherContent.style.maxHeight = null; // 重置最大高度，觸發收合動畫
+                                otherContent.classList.remove('active'); // 移除活躍類別
+                                otherArrow.classList.remove('rotate-180'); // 箭頭轉回原位
+                                otherHeader.classList.remove('active'); // 移除 header 的 active 類別
+                            }
+                        }
+                    });
+
+                    // 切換當前點擊的手風琴內容區塊的開啟/關閉狀態
+                    if (content.classList.contains('active')) {
+                        // 如果當前已開啟，則關閉它
+                        content.style.maxHeight = null; // 重置最大高度
+                        content.classList.remove('active'); // 移除活躍類別
+                        arrow.classList.remove('rotate-180'); // 箭頭轉回原位
+                        header.classList.remove('active'); // 移除 header 的 active 類別
+                    } else {
+                        // 如果當前已關閉，則開啟它
+                        content.classList.add('active'); // 添加活躍類別
+                        // 設定內容區塊的最大高度為其滾動高度，確保內容完全顯示並觸發展開動畫
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        arrow.classList.add('rotate-180'); // 箭頭旋轉180度
+                        header.classList.add('active'); // 添加 header 的 active 類別
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
